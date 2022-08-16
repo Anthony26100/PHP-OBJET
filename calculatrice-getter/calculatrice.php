@@ -1,5 +1,5 @@
 <?php
-  if(isset($_POST['add'])&&($_POST['sous'])&&($_POST['divi'])&&()){
+  if(isset($_POST['add'])&&($_POST['sous'])&&($_POST['divi'])){
     $val1 = $_POST['valeur1'];
     $val2 = $_POST['valeur2'];
 
