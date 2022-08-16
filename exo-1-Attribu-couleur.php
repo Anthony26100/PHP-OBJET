@@ -18,6 +18,7 @@ Afficher le compteur -->
 <?php
 
 class Voiture {
+  
   private $couleur = 'Bleu';
   private $vitesse = 0;
   private $puissance = '50';
