@@ -1,29 +1,24 @@
 <?php
-  if(isset($_POST['add'])&&($_POST['sous'])&&($_POST['divi'])){
-    $val1 = $_POST['valeur1'];
-    $val2 = $_POST['valeur2'];
+include('calculatrice.class.php');
 
-    class Addition {
-      
-      private $sommes;
-
-      public function __construct()
-      {
-        $this->sommes;
-      }
-
-      public function setAddition($val1, $val2) {
-        return $this->sommes = $val1 + $val2;
-      }
-
-      public function getAddition() { 
-        return $this->sommes;
+  if((isset($_POST['add'])) || (isset($_POST['soustraction']))|| (isset($_POST['division'])) || (isset($_POST['multiplier']))){
+    if(is_numeric($_POST['valeur1']) || is_numeric($_POST['valeur2'])) {
+      $calculer = new Calculatrice($_POST['valeur1'],$_POST['valeur2']);
+      if(isset($_POST['add'])){
+        echo $calculer->additionner();
+      }elseif ($_POST['soustraction']){
+        echo $calculer->soustraction();
+      }elseif($_POST['division']){
+        echo $calculer->division();
+      }elseif($_POST['multiplier']) {
+        echo $calculer->multiplier();
+      } 
+    } else {
+        echo "Veuillez saisir des valeurs numériques";
       }
     }
-    $AdditionCalcul = new Addition();
-    $AdditionCalcul->setAddition($val1, $val2);
-    echo $AdditionCalcul-> getAddition();
-  }
+
+
 
 ?>
 
@@ -36,15 +31,15 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="#" method="post">
+  <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
     <input type="number" name="valeur1" id="">
     <br/>
     <input type="number" name="valeur2" id="">
     <br/><br/>
     <input type="submit" value="+" name="add">
-    <input type="submit" value="-" name="sous">
-    <input type="submit" value="/" name="divi">
-    <input type="submit" value="*" name="multi">
+    <input type="submit" value="-" name="soustraction">
+    <input type="submit" value="/" name="division">
+    <input type="submit" value="*" name="multiplier">
   </form>
 </body>
 </html>
