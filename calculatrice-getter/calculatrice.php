@@ -1,25 +1,5 @@
 <?php
-include('calculatrice.class.php');
-
-  if((isset($_POST['add'])) || (isset($_POST['soustraction']))|| (isset($_POST['division'])) || (isset($_POST['multiplier']))){
-    if(is_numeric($_POST['valeur1']) || is_numeric($_POST['valeur2'])) {
-      $calculer = new Calculatrice($_POST['valeur1'],$_POST['valeur2']);
-      if(isset($_POST['add'])){
-        echo $calculer->additionner();
-      }elseif ($_POST['soustraction']){
-        echo $calculer->soustraction();
-      }elseif($_POST['division']){
-        echo $calculer->division();
-      }elseif($_POST['multiplier']) {
-        echo $calculer->multiplier();
-      } 
-    } else {
-        echo "Veuillez saisir des valeurs numériques";
-      }
-    }
-
-
-
+include('./calculatrice.class.php');
 ?>
 
 <!DOCTYPE html>
@@ -43,3 +23,22 @@ include('calculatrice.class.php');
   </form>
 </body>
 </html>
+
+<?php
+  if((isset($_POST['add'])) || (isset($_POST['soustraction']))|| (isset($_POST['division'])) || (isset($_POST['multiplier']))){
+    if(is_numeric($_POST['valeur1']) || is_numeric($_POST['valeur2'])) {
+      $calculer = new Calculatrice($_POST['valeur1'],$_POST['valeur2']);
+      if(isset($_POST['add'])){
+        echo $calculer->additionner();
+      }elseif ($_POST['soustraction']){
+        echo $calculer->soustraction();
+      }elseif($_POST['division']){
+        echo $calculer->division();
+      }elseif($_POST['multiplier']) {
+        echo $calculer->multiplier();
+      } 
+    } else {
+        echo "Veuillez saisir des valeurs numériques";
+      }
+    }
+?>
