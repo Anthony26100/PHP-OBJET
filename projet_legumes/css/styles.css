@@ -5,10 +5,10 @@
   background-color: rgb(123, 73, 73);
 }
 
-body {
+/* body {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .block1 {
   display: flex;

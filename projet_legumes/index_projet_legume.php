@@ -18,19 +18,15 @@
   $navets = new Legumes;
 
   // Initialisation des variables objets Nom
-  $carottes->setNom('Carottes');
-  $poireaux->setNom('Poireaux');
-  $navets->setNom('Navets');
+  $carottes->setNom('carottes');
+  $poireaux->setNom('poireaux');
+  $navets->setNom('navets');
 
   // Initialisation variables objets Prix
   $carottes->setPrix(1);
   $poireaux->setPrix(2);
   $navets->setPrix(3);
 
-  // Initialisation variables objets Quantite
-  $carottes->setQuantite(1);
-  $poireaux->setQuantite(1);
-  $navets->setQuantite(1);
   ?>
   <section class="bloc1">
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
@@ -48,9 +44,13 @@
 
 <?php
 if (isset($_POST['calculer'])){
+  $legumeList = $_POST['legumes'];
   $qte =  $_POST['quantiter'];
+  $$legumeList->setQuantite($qte);
 
-  
+  echo "Le montant de votre panier est de : ".$$legumeList->Calculer().' euros';
+
+  // echo $legumeList.' '.$qte;
 }
 
 ?>

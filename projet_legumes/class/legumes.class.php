@@ -36,4 +36,8 @@ class Legumes
   public function getQuantite() {
     return $this->_quantite;
   }
+
+  public function Calculer() {
+    return $this->_prix * $this->_quantite;
+  }
 }
