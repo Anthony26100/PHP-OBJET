@@ -13,7 +13,12 @@ class User
   }
 }
 
+function tester()
+{
+  echo "Appel de la fonction tester <br/>";
+}
+
 // Espaces de nom global (va chercher une fonction avant le vendor)
 // 2 façon de les appelers pour les utilisers
 $date = new DateTime();
-$date2 = new \DateTime();
+// $date2 = new \DateTime();
