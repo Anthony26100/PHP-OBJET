@@ -1,0 +1,10 @@
+marque d'une voiture 
+nombre de chevaux
+type moteur (essence, disel, electrique...)
+couleur de la voiture
+
+Dans un fichier ecrire la commande (La marque de $marqueVoiture à $Chevaux et de type $moteur, de couleur $couleurVoiture  )
+
+
+Je viens de réfléchir sur l'exercice que je vous ai demandé de réaliser et cela n'est pas possible car un get est dynamique et aucune mémorisation est possible de la donnée. On  ne peut afficher qu'une seule série de données à l'instant T.
+L'idée est d'écrire les informations dans un fichier chaque fois que nous cliquons sur le bouton envoyer. Je vous laisse deux semaines pour le réaliser.
