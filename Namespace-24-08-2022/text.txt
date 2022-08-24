@@ -1,0 +1,1 @@
+rename indexo.php en index.php pour faire fonctionner d'autres exemples ou rename dans les dossier la direction à indexo.php

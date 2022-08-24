@@ -1,24 +1,31 @@
 <?php
 
 // declare(encoding="UTF-8");
-namespace Cci;
-
-use DateTime;
+// namespace Cci\utilisateurs;
+namespace Cci\lib\user;
+const PRENOM = "toto";
+// use DateTime;
 
 class User
 {
   public function __construct()
   {
-    echo "Lib user contruct <br/>";
+    echo "Lib Email contruct <br/>";
   }
 }
 
-function tester()
+function calculer()
 {
-  echo "Appel de la fonction tester <br/>";
+  echo "appel de calculer <br/>";
 }
 
-// Espaces de nom global (va chercher une fonction avant le vendor)
-// 2 façon de les appelers pour les utilisers
-$date = new DateTime();
-// $date2 = new \DateTime();
+// function tester()
+// {
+//   echo "Appel de la fonction tester <br/>";
+// }
+
+// const NOM="toto";
+// // Espaces de nom global (va chercher une fonction avant le vendor)
+// // 2 façon de les appelers pour les utilisers
+// $date = new DateTime();
+// // $date2 = new \DateTime();
